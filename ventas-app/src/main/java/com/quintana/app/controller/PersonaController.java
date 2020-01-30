@@ -18,7 +18,7 @@ import com.quintana.app.model.Persona;
 import com.quintana.app.service.IPersonaService;
 
 @RestController
-@RequestMapping("/persona")
+@RequestMapping("/personas")
 public class PersonaController {
 
 	@Autowired

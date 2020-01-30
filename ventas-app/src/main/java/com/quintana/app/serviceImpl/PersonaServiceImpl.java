@@ -1,42 +1,47 @@
 package com.quintana.app.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.quintana.app.model.Persona;
+import com.quintana.app.repo.IPersonaRepo;
 import com.quintana.app.service.IPersonaService;
+
 @Service
-public class PersonaServiceImpl implements IPersonaService{
+public class PersonaServiceImpl implements IPersonaService {
+
+	@Autowired
+	private IPersonaRepo repo;
 
 	@Override
 	public Persona registrar(Persona obj) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.save(obj);
 	}
 
 	@Override
 	public Persona modificar(Persona obj) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.save(obj);
 	}
 
 	@Override
 	public List<Persona> listar() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
 	public Persona listarPorId(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Persona> pr = repo.findById(id);
+		return pr.isPresent() ? pr.get() : new Persona();
+		
 	}
 
 	@Override
 	public boolean eliminar(Integer id) {
-		// TODO Auto-generated method stub
-		return false;
+		repo.deleteById(id);
+		return true;
 	}
 
-	
 }

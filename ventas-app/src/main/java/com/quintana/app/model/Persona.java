@@ -14,12 +14,13 @@ public class Persona {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idPersona;
+
 	@Column(name = "nombres", nullable = false, length = 200)
 	private String nombres;
+
 	@Column(name = "apellidos", nullable = false, length = 200)
 	private String apellidos;
-	
-	
+
 	// Getter and Setter
 	/**
 	 * @return the idPersona
@@ -27,30 +28,35 @@ public class Persona {
 	public Integer getIdPersona() {
 		return idPersona;
 	}
+
 	/**
 	 * @param idPersona the idPersona to set
 	 */
 	public void setIdPersona(Integer idPersona) {
 		this.idPersona = idPersona;
 	}
+
 	/**
 	 * @return the nombres
 	 */
 	public String getNombres() {
 		return nombres;
 	}
+
 	/**
 	 * @param nombres the nombres to set
 	 */
 	public void setNombres(String nombres) {
 		this.nombres = nombres;
 	}
+
 	/**
 	 * @return the apellidos
 	 */
 	public String getApellidos() {
 		return apellidos;
 	}
+
 	/**
 	 * @param apellidos the apellidos to set
 	 */
@@ -58,5 +64,4 @@ public class Persona {
 		this.apellidos = apellidos;
 	}
 
-	
 }
