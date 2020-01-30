@@ -1,0 +1,31 @@
+<----------------Json Registro Personas ------------------->
+{
+	"nombres" : "Andres Felipe",
+	"apellidos": "Quintana Masmela"
+}
+
+
+<---------------Json Registro Productos ------------------>
+
+{
+	"nombre" : "Arroz Blanco 3 kg",
+	"marca": "Florhuila"
+}
+
+
+<---------------Json Registro Ventas --------------------->
+
+{
+	"persona" : {
+		"idPersona" : 1
+	},
+	
+	"fecha" : "2020-01-30T05:00:00.000Z",
+	"importe" : 5000,
+	
+	"detalleVenta" :[
+	    { "cantidad" : 3, "producto" : {"idProducto" : 1}},
+	    { "cantidad" : 5, "producto" : {"idProducto" : 2}}
+		]
+
+}
